@@ -16,7 +16,10 @@
 			{{ layoutContent | safe }}
 		</main>
 
+	{# Ceci est une condition. Elle vérifie si la variable 'showFooter' est vraie. #}
+	{% if showFooter %}
 		{% include "components/footer.njk" %}
+	{% endif %}
 
 	</body>
 
