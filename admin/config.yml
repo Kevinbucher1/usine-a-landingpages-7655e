@@ -20,6 +20,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titre de la page", name: "title", widget: "string" }
+       - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" }
       - { label: "Contenu HTML (Body)", name: "body", widget: "markdown" } # <-- AJOUTEZ CETTE LIGNE
 
   # Collection pour les articles de blog
