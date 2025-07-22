@@ -13,4 +13,11 @@
     {% include "assets/js/inline.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script> #}
+
+{% if page_css %}
+  <style>
+    {{ page_css | safe }}
+  </style>
+{% endif %}
+
 </head>
