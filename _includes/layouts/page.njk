@@ -2,6 +2,15 @@
 layout: layouts/base.njk
 section: page
 ---
-<h1>{{ title }}</h1>
+{# Ce bloc injecte le CSS personnalisé de la page dans le <head> #}
+{% if page_css %}
+  {%- set pageStyles %}
+    <style>
+      {{ page_css | safe }}
+    </style>
+  {%- endset -%}
+  {{ pageStyles | safe }}
+{% endif %}
 
-{{ layoutContent | safe }}
+{# Le contenu principal de votre page #}
+{{ content | safe }}
