@@ -27,7 +27,6 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Afficher le pied de page", name: "showFooter", widget: "boolean", default: true, required: false}
   # Our pages e.g. About
   - name: "pages"
     label: "Page"
@@ -38,6 +37,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Afficher le pied de page", name: "showFooter", widget: "boolean", default: true, required: false}
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
         name: "eleventyNavigation"
         widget: "object"
