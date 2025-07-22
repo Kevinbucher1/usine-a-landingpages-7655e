@@ -5,64 +5,91 @@ permalink: meta-gazelec
 eleventyNavigation:
   order: 0
   showFooter: true
-  page_css: ""
-  key: "1"
----
-<script src="https://cdn.tailwindcss.com"></script>
+  page_css: >-
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          'primary': '#141A46',      // Bleu Marine
-          'secondary': '#8BD8BD',    // Vert Menthe/Jade
-          'accent': '#EC8B5E',       // Orange Vif
-          'light-bg': '#F1F7F9',     // Fond clair
-        },
-        fontFamily: {
-          'sans': ['Poppins', 'sans-serif'],
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#141A46',
+              'secondary': '#8BD8BD',
+              'accent': '#EC8B5E',
+              'light-bg': '#F1F7F9',
+            },
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif'],
+            }
+          }
         }
       }
-    }
-  }
-</script>
+    </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16465363779"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-16465363779');
-</script>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '963557524306737');
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1"
-src="https://www.facebook.com/tr?id=963557524306737&ev=PageView&noscript=1"/>
-</noscript>
-<script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"bottom-right","lang":"fr","perPurposeConsent":true,"siteId":3550954,"whitelabel":false,"cookiePolicyId":41345322,"i18n":{"fr":{"banner":{"title":"Vos données sont protégées.","dynamic":{"body":"Nous ainsi que des tiers sélectionnés utilisons des cookies ou des technologies similaires pour des finalités techniques et, avec votre consentement, pour les finalités « fonctionnalité », « expérience », « mesure » et « marketing » (publicités personnalisées)."}}}},"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#334757","acceptButtonDisplay":true,"backgroundColor":"#F4FBFF","closeButtonDisplay":false,"customizeButtonCaptionColor":"#14213D","customizeButtonColor":"#DCE2E6","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"bottom","rejectButtonCaptionColor":"#FFFFFF","rejectButtonColor":"#334757","rejectButtonDisplay":true,"theme":"winter-neutral","textColor":"#45423F"}};
-</script>
-<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3550954.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16465363779"></script>
 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16465363779');
+    </script>
+
+
+    <script>
+
+    !function(f,b,e,v,n,t,s)
+
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+    n.queue=[];t=b.createElement(e);t.async=!0;
+
+    t.src=v;s=b.getElementsByTagName(e)[0];
+
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '963557524306737');
+
+    fbq('track', 'PageView');
+
+    </script>
+
+    <noscript>
+
+    <img height="1" width="1"
+
+    src="https://www.facebook.com/tr?id=963557524306737&ev=PageView&noscript=1"/>
+
+    </noscript>
+
+    <script type="text/javascript">
+
+    var _iub = _iub || [];
+
+    _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"bottom-right","lang":"fr","perPurposeConsent":true,"siteId":3550954,"whitelabel":false,"cookiePolicyId":41345322,"i18n":{"fr":{"banner":{"title":"Vos données sont protégées.","dynamic":{"body":"Nous ainsi que des tiers sélectionnés utilisons des cookies ou des technologies similaires pour des finalités techniques et, avec votre consentement, pour les finalités « fonctionnalité », « expérience », « mesure » et « marketing » (publicités personnalisées)."}}}},"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#334757","acceptButtonDisplay":true,"backgroundColor":"#F4FBFF","closeButtonDisplay":false,"customizeButtonCaptionColor":"#14213D","customizeButtonColor":"#DCE2E6","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"bottom","rejectButtonCaptionColor":"#FFFFFF","rejectButtonColor":"#334757","rejectButtonDisplay":true,"theme":"winter-neutral","textColor":"#45423F"}};
+
+    </script>
+
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3550954.js"></script>
+
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+  key: "1"
+---
 <div class="bg-light-bg font-sans">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-4">
@@ -96,80 +123,24 @@ _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferenc
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Votre offre personnalisée en 3 étapes claires</h2>
                 <div class="grid md:grid-cols-3 gap-10 text-center">
                     <div class="step">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                            </div>
-                        </div>
                         <h3 class="text-xl font-bold mb-2 text-primary">1. Vous complétez le formulaire</h3>
-                        <p class="text-gray-600">Indiquez vos coordonnées et informations de base. C'est rapide, gratuit et sécurisé.</p>
+                        <p class="text-gray-600">Indiquez vos coordonnées et informations de base.</p>
                     </div>
                     <div class="step">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0.7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-primary">2. L’un de nos fournisseurs d’énergie vous appelle</h3>
-                        <p class="text-gray-600">Notre partenaire vous appelle pour affiner votre demande et vous présenter son offre.</p>
+                        <h3 class="text-xl font-bold mb-2 text-primary">2. Un fournisseur vous appelle</h3>
+                        <p class="text-gray-600">Il vous présente son offre sans engagement.</p>
                     </div>
                     <div class="step">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 6 9 17l-5-5"></path></svg>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-primary">3. Vous décidez, sans pression</h3>
-                        <p class="text-gray-600">Vous recevez une proposition détaillée et restez libre de l'accepter ou de la refuser.</p>
+                        <h3 class="text-xl font-bold mb-2 text-primary">3. Vous décidez</h3>
+                        <p class="text-gray-600">Vous restez libre d'accepter ou de refuser.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="py-16 md:py-24 bg-light-bg">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Questions fréquentes</h2>
-                <div class="max-w-3xl mx-auto space-y-4">
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                            Ce service est-il un comparateur de fournisseurs?
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform duration-300 group-open:rotate-45"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                        </summary>
-                        <p class="text-gray-600 mt-4">Non. Notre service vous met directement et gratuitement en relation avec un unique fournisseur d'énergie partenaire. Celui-ci vous contactera pour vous proposer une offre adaptée à votre profil.</p>
-                    </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                            Le changement de fournisseur est-il payant?
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform duration-300 group-open:rotate-45"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                        </summary>
-                        <p class="text-gray-600 mt-4">Non, le changement de fournisseur d'énergie pour un client particulier est toujours gratuit. La loi interdit les frais de résiliation de votre ancien contrat ainsi que les frais de souscription au nouveau.</p>
-                    </details>
-                    <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                            Vais-je subir une coupure d'énergie?
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform duration-300 group-open:rotate-45"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                        </summary>
-                        <p class="text-gray-600 mt-4">Absolument pas. La continuité de votre fourniture est garantie par le gestionnaire du réseau (Enedis ou GRDF). Le changement est une démarche purement administrative sans impact technique.</p>
-                    </details>
-                     <details class="bg-white p-6 rounded-lg shadow-sm group">
-                        <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                            Suis-je obligé(e) d'accepter l'offre?
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 transition-transform duration-300 group-open:rotate-45"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                        </summary>
-                        <p class="text-gray-600 mt-4">Non, vous êtes totalement libre. La proposition que vous recevrez est sans aucun engagement de votre part. Vous pouvez la refuser sans avoir à fournir de justification.</p>
-                    </details>
                 </div>
             </div>
         </section>
     </main>
-             <footer class="bg-primary text-white mt-auto">
-        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p class="text-sm opacity-80 mb-4 md:mb-0">&copy; 2025 Mon Choix Conso. Tous droits réservés.</p>
-            <nav class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <a href="https://monchoixconso.com/nouveaufournisseur/mentions-legales.html" target="_blank" class="text-sm hover:underline opacity-80 hover:opacity-100">Mentions légales</a>
-                <a href="https://monchoixconso.com/nouveaufournisseur/cgu-cgv.html" target="_blank" class="text-sm hover:underline opacity-80 hover:opacity-100">CGU-CGV</a>
-                <a href="https://monchoixconso.com/nouveaufournisseur/politique-de-confidentialite.html" target="_blank" class="text-sm hover:underline opacity-80 hover:opacity-100">Politique de protection des données</a>
-            </nav>
+    <footer class="bg-primary text-white mt-auto">
+        <div class="container mx-auto px-6 py-8">
+            <p class="text-sm text-center opacity-80">&copy; 2025 Mon Choix Conso.</p>
         </div>
     </footer>
 </div>
