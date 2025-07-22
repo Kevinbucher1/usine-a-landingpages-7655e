@@ -1,48 +1,32 @@
-# Decap CMS Configuration File
+# config.yml
 
-# The backend option specifies how to access the content for your site
-backend:
-  name: git-gateway
-  branch: master # The branch to update (optional; defaults to master)
-
-# Uncomment below to enable drafts https://www.decapcms.org/docs/add-to-your-site/#editorial-workflow
-# publish_mode: editorial_workflow
-
-# Uncomment below to enable a link to your published site in the header bar of Decap CMS
-# site_url: https://eleventy-netlify-boilerplate.netlify.app/
-
-media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+media_folder: "static/img"
 
 collections:
-  # Our blog posts
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
-  - name: "pages"
-    label: "Page"
-    folder: "pages"
+  # Collection pour les Landing Pages (fichiers .njk)
+  - name: "landing_pages"
+    label: "Landing Page (HTML/NJK)"
+    folder: "pages" # Le dossier où les fichiers sont sauvegardés
     create: true
     slug: "{{slug}}"
+    extension: "njk"  # Force la création de fichiers .njk
+    format: "frontmatter" # Dit au CMS de séparer le front matter (---) du contenu
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "URL (Permalink)", name: "permalink", widget: "string", hint: "Exemple: /ma-super-page/" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" } # Applique le layout par défaut
+      - { label: "Scripts & Styles (Head)", name: "page_css", widget: "code", hint: "Code à injecter dans la balise <head>" }
+      - { label: "Contenu HTML (Body)", name: "body", widget: "code" }
+
+  # Collection pour les articles de blog (fichiers .md)
+  - name: "blog"
+    label: "Article de Blog (Markdown)"
+    folder: "posts"
+    create: true
+    extension: "md" # Force la création de fichiers .md
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
-          - { label: "Afficher le pied de page", name: "showFooter", widget: "boolean", default: true, required: false}
-      - { label: "CSS de la Page", name: "page_css", widget: "markdown", hint: "Collez ici UNIQUEMENT le code CSS pour cette page.", required: false}
-      - { label: "Body", name: "body", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" } # Le widget markdown est parfait ici
