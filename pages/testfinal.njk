@@ -5,13 +5,11 @@ layout: layouts/base.njk
 page_css: >-
   <script data-iub-purposes="1" src="https://cdn.tailwindcss.com"></script>
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 
   <script>
     tailwind.config = {
@@ -21,7 +19,7 @@ page_css: >-
             'primary': '#141A46',
             'secondary': '#8BD8BD',
             'accent': '#EC8B5E',
-        'light-bg': '#F1F7F9',
+            'light-bg': '#F1F7F9',
           },
           fontFamily: {
             'sans': ['Poppins', 'sans-serif'],
@@ -32,13 +30,11 @@ page_css: >-
   </script>
 ---
 <div class="bg-light-bg font-sans">
-
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-4">
             <a href="#" class="text-2xl font-bold text-primary">Mon Choix Conso</a>
         </div>
     </header>
-
     <main>
         <section id="hero" class="bg-primary text-white py-12 md:py-20">
             <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -59,7 +55,6 @@ page_css: >-
                 </div>
             </div>
         </section>
-
         <section id="process" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Votre offre personnalisée en 3 étapes claires</h2>
@@ -94,7 +89,6 @@ page_css: >-
                 </div>
             </div>
         </section>
-
         <section id="faq" class="py-16 md:py-24 bg-light-bg">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Questions fréquentes</h2>
@@ -131,5 +125,4 @@ page_css: >-
             </div>
         </section>
     </main>
-    
 </div>
