@@ -7,8 +7,7 @@ eleventyNavigation:
   showFooter: true
   page_css: >-
     <script src="https://cdn.tailwindcss.com"></script>
-
-
+     
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +95,7 @@ eleventyNavigation:
             <a href="#" class="text-2xl font-bold text-primary">Mon Choix Conso</a>
         </div>
     </header>
-
+ 
     <main>
         <section id="hero" class="bg-primary text-white py-12 md:py-20">
             <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
