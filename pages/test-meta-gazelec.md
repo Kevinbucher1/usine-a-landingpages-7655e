@@ -42,8 +42,7 @@ eleventyNavigation:
       gtag('js', new Date());
       gtag('config', 'AW-16465363779');
     </script>
-
-
+      
     <script>
 
     !function(f,b,e,v,n,t,s)
@@ -143,3 +142,4 @@ eleventyNavigation:
         </div>
     </footer>
 </div>
+ 
