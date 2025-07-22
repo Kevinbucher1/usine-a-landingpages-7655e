@@ -21,7 +21,7 @@ collections:
     fields:
       - { label: "Titre de la page", name: "title", widget: "string", required: true } # Titre rendu obligatoire pour éviter les bugs
       - { label: "URL personnalisée (ex: /ma-super-promo)", name: "permalink", widget: "string", required: true } # Pour contrôler l'URL si besoin
-      - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" } # L'éditeur de code est le meilleur pour ce champ
+      - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "markdown" } # L'éditeur de code est le meilleur pour ce champ
       - { label: "Contenu HTML (pour le <body>)", name: "body", widget: "markdown" } # La solution à notre bug !
 
 
