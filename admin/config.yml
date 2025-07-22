@@ -19,9 +19,11 @@ collections:
     extension: "njk"
     format: "frontmatter"
     fields:
-      - { label: "Titre de la page", name: "title", widget: "string" }
-       - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" }
-      - { label: "Contenu HTML (Body)", name: "body", widget: "markdown" } # <-- AJOUTEZ CETTE LIGNE
+      - { label: "Titre de la page", name: "title", widget: "string", required: true } # Titre rendu obligatoire pour éviter les bugs
+      - { label: "URL personnalisée (ex: /ma-super-promo)", name: "permalink", widget: "string", required: true } # Pour contrôler l'URL si besoin
+      - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" } # L'éditeur de code est le meilleur pour ce champ
+      - { label: "Contenu HTML (pour le <body>)", name: "body", widget: "markdown" } # La solution à notre bug !
+
 
   # Collection pour les articles de blog
   - name: "blog"
