@@ -1,35 +1,29 @@
 ---
 title: testmeta
-permalink: testmeta
-page_css:
-  code: >-
-    <script data-iub-purposes="1" src="https://cdn.tailwindcss.com"></script>
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#141A46',
-              'secondary': '#8BD8BD',
-              'accent': '#EC8B5E',
-          'light-bg': '#F1F7F9',
-            },
-            fontFamily: {
-              'sans': ['Poppins', 'sans-serif'],
-            }
+permalink: /testmeta/
+layout: layouts/base.njk
+page_css: >-
+  <script data-iub-purposes="1" src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#141A46',
+            'secondary': '#8BD8BD',
+            'accent': '#EC8B5E',
+            'light-bg': '#F1F7F9',
+          },
+          fontFamily: {
+            'sans': ['Poppins', 'sans-serif'],
           }
         }
       }
-    </script>
+    }
+  </script>
 ---
 <div class="bg-light-bg font-sans">
 
@@ -131,5 +125,5 @@ page_css:
             </div>
         </section>
     </main>
-    
+
 </div>
