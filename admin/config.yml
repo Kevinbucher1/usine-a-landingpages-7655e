@@ -10,18 +10,18 @@ media_folder: "static/img"
 
 # Collections de contenu
 collections:
-  # Collection pour les Landing Pages (fichiers .njk)
-   - name: "landing_pages"
+  # Collection pour les Landing Pages (test minimal)
+  - name: "landing_pages"
     label: "Landing Page"
     folder: "pages"
     create: true
-    slug: "{{slug}}"        # On revient au défaut pour le test
+    slug: "{{slug}}"
     extension: "njk"
     format: "frontmatter"
     fields:
       - { label: "Titre de la page", name: "title", widget: "string" }
 
-  # Gardez cette collection si vous avez un blog
+  # Collection pour les articles de blog
   - name: "blog"
     label: "Article de Blog"
     folder: "posts"
