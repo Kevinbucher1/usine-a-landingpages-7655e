@@ -15,7 +15,7 @@ collections:
     label: "Landing Page"
     folder: "pages"
     create: true
-    slug: "{{slug}}"
+    slug: "{{permalink}}"
     extension: "njk"
     format: "frontmatter"
     fields:
