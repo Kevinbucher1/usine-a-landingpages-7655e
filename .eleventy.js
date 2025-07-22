@@ -63,6 +63,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Minify HTML output
+  /*
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if (outputPath.indexOf(".html") > -1) {
       let minified = htmlmin.minify(content, {
@@ -74,6 +75,7 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+  */
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
