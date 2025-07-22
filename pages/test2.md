@@ -34,7 +34,7 @@ eleventyNavigation:
       }
     </script>
 page_css: >-
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script data-iub-purposes="1" src="https://cdn.tailwindcss.com"></script>
    
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
