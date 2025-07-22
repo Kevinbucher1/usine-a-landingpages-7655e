@@ -33,6 +33,33 @@ eleventyNavigation:
         }
       }
     </script>
+page_css: >-
+  <script src="https://cdn.tailwindcss.com"></script>
+   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#141A46',
+            'secondary': '#8BD8BD',
+            'accent': '#EC8B5E',
+            'light-bg': '#F1F7F9',
+          },
+          fontFamily: {
+            'sans': ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 ---
 <div class="bg-light-bg font-sans">
     <header class="bg-white shadow-md">
