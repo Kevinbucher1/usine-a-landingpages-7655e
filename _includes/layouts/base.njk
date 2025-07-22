@@ -1,26 +1,21 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html lang="fr">
 
-	{% include "components/head.njk" %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    
+    {# Cette partie injecte TOUS vos scripts et styles #}
+    {% if page_css %}
+        {{ page_css | safe }}
+    {% endif %}
+</head>
 
-	<body>
+<body>
 
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
-		</header>
+    {# Cette partie injecte TOUT votre contenu HTML #}
+    {{ content | safe }}
 
-		<main>
-			{{ layoutContent | safe }}
-		</main>
-
-	{# Ceci est une condition. Elle vérifie si la variable 'showFooter' est vraie. #}
-	{% if showFooter %}
-		{% include "components/footer.njk" %}
-	{% endif %}
-
-	</body>
-
+</body>
 </html>
