@@ -1,32 +1,38 @@
-# config.yml
+# Decap CMS Configuration File
 
+# Partie backend, essentielle pour la connexion à GitHub
+backend:
+  name: git-gateway
+  branch: master
+
+# Emplacement des médias
 media_folder: "static/img"
 
+# Collections de contenu
 collections:
   # Collection pour les Landing Pages (fichiers .njk)
   - name: "landing_pages"
-    label: "Landing Page (HTML/NJK)"
-    folder: "pages" # Le dossier où les fichiers sont sauvegardés
+    label: "Landing Page"
+    folder: "pages"
     create: true
     slug: "{{slug}}"
-    extension: "njk"  # Force la création de fichiers .njk
-    format: "frontmatter" # Dit au CMS de séparer le front matter (---) du contenu
+    extension: "njk"
+    format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date de publication", name: "date", widget: "datetime" }
-      - { label: "URL (Permalink)", name: "permalink", widget: "string", hint: "Exemple: /ma-super-page/" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" } # Applique le layout par défaut
-      - { label: "Scripts & Styles (Head)", name: "page_css", widget: "code", hint: "Code à injecter dans la balise <head>" }
-      - { label: "Contenu HTML (Body)", name: "body", widget: "code" }
+      - { label: "Titre de la page", name: "title", widget: "string" }
+      - { label: "URL de la page (ex: /ma-page)", name: "permalink", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
+      - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" }
+      - { label: "Contenu HTML (pour le <body>)", name: "body", widget: "code" }
 
-  # Collection pour les articles de blog (fichiers .md)
+  # Gardez cette collection si vous avez un blog
   - name: "blog"
-    label: "Article de Blog (Markdown)"
+    label: "Article de Blog"
     folder: "posts"
     create: true
-    extension: "md" # Force la création de fichiers .md
+    extension: "md"
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" } # Le widget markdown est parfait ici
+      - { label: "Body", name: "body", widget: "markdown" }
