@@ -45,4 +45,4 @@ collections:
           - { label: "Order", name: "order", widget: "number", default: 0 }
           - { label: "Afficher le pied de page", name: "showFooter", widget: "boolean", default: true, required: false}
           - { label: "CSS de la Page", name: "page_css", widget: "markdown", hint: "Collez ici UNIQUEMENT le code CSS pour cette page.", required: false}
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "text" }
