@@ -22,6 +22,7 @@ collections:
       
       # Un champ pour contrôler l'URL, comme vous l'aviez au début
       - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true }
+      - { label: "Afficher le pied de page global", name: "showFooter", widget: "boolean", default: true }
 
       # Le champ principal pour coller tout votre code
-      - { label: "Code complet de la page (HTML, CSS, etc.)", name: "body", widget: "markdown" }
+      - { label: "Contenu du <body> de la page", name: "body", widget: "markdown", hint: "Collez ici uniquement le contenu visible de la page (sections, divs, etc.), pas la page HTML complète." }
