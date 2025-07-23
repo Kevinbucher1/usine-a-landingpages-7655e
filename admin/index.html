@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Content Manager</title>
-  </head>
+</head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   
   <script>
-    // Plus besoin d'attendre 'DOMContentLoaded', car on est déjà à la fin de la page.
-    
     // Enregistre un formateur YAML personnalisé pour forcer le formatage "literal" (`|`)
     CMS.registerCustomFormat('yaml-literal', {
       fromFile: (content) => jsyaml.load(content),
