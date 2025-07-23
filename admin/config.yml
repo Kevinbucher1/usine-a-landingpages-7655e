@@ -16,7 +16,7 @@ collections:
     folder: "pages"
     create: true
     slug: "{{slug}}"
-    extension: "njk"
+    extension: "md"
     format: "frontmatter"
     fields:
       - { label: "Titre de la page", name: "title", widget: "string", required: true } # Titre rendu obligatoire pour éviter les bugs
