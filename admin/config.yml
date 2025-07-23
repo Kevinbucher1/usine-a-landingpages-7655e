@@ -20,7 +20,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titre de la page", name: "title", widget: "string", required: true } # Titre rendu obligatoire pour éviter les bugs
-      - { label: "URL personnalisée (ex: /ma-super-promo)", name: "permalink", widget: "string", required: true } # Pour contrôler l'URL si besoin
+      - { label: "URL personnalisée (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true, hint: "Entrez juste le texte, sans les barres /" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" } # <-- LA LIGNE CRUCIALE A AJOUTER
       - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code" } # L'éditeur de code est le meilleur pour ce champ
       - { label: "Contenu HTML de la page", name: "body", widget: "markdown" }
