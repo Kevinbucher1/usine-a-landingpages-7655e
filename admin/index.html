@@ -2,23 +2,18 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Content Manager</title>
+  <title>Content Manager - Test Minimal</title>
 </head>
 <body>
   
   <div id="nc-root"></div>
 
   <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   
   <script>
-    // Enregistre un formateur YAML personnalisé pour forcer le formatage "literal" (`|`)
-    CMS.registerCustomFormat('yaml-literal', {
-      fromFile: (content) => jsyaml.load(content),
-      toFile: (data) => jsyaml.dump(data, { styles: { '!!str': 'literal' } })
-    });
+    // Note : Le formateur personnalisé a été temporairement retiré.
 
-    // Définit la configuration complète du CMS dans un objet JavaScript.
+    // Configuration la plus simple possible
     var config = {
       backend: {
         name: "git-gateway",
@@ -26,6 +21,7 @@
       },
       media_folder: "static/img",
       collections: [
+        // On ne garde qu'une seule collection pour le test
         {
           name: "landing_pages",
           label: "Landing Page",
@@ -33,32 +29,17 @@
           create: true,
           slug: "{{slug}}",
           extension: "njk",
-          format: "yaml-literal", 
+          // On utilise le format par défaut, pas notre format personnalisé
+          format: "frontmatter", 
           fields: [
             { label: "Titre de la page", name: "title", widget: "string", required: true },
-            { label: "URL personnalisée (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true, hint: "Entrez juste le texte, sans les barres /" },
-            { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
-            { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code", allow_language_selection: false, output_code_only: true },
             { label: "Contenu HTML de la page", name: "body", widget: "markdown" },
-          ],
-        },
-        {
-          name: "blog",
-          label: "Article de Blog",
-          folder: "posts",
-          create: true,
-          extension: "md",
-          format: "yaml-literal",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            { label: "Publish Date", name: "date", widget: "datetime" },
-            { label: "Body", name: "body", widget: "markdown" },
           ],
         },
       ],
     };
 
-    // Initialise le CMS avec la configuration définie ci-dessus.
+    // Initialisation du CMS
     CMS.init({ config });
   </script>
 </body>
