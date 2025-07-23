@@ -1,21 +1,3 @@
-<!doctype html>
-<html lang="fr">
+# /layouts/base.njk
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    
-    {# Cette partie injecte TOUS vos scripts et styles #}
-    {% if page_css %}
-        {{ page_css | safe }}
-    {% endif %}
-</head>
-
-<body>
-
-    {# Cette partie injecte TOUT votre contenu HTML #}
-    {{ content | safe }}
-
-</body>
-</html>
+{{ content | safe }}
