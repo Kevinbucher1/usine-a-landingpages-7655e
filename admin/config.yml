@@ -17,12 +17,17 @@ collections:
     extension: "njk" 
     format: "frontmatter"
     fields:
-      # Un champ pour le nom de la page dans l'interface du CMS
       - { label: "Titre de la page (pour le CMS)", name: "title", widget: "string" }
-      
-      # Un champ pour contrôler l'URL, comme vous l'aviez au début
       - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true }
       - { label: "Afficher le pied de page global", name: "showFooter", widget: "boolean", default: true }
-
-      # Le champ principal pour coller tout votre code
-      - { label: "Contenu du <body> de la page", name: "body", widget: "markdown", hint: "Collez ici uniquement le contenu visible de la page (sections, divs, etc.), pas la page HTML complète." }
+      
+      # --- CHAMP AJOUTÉ ---
+      # Un champ dédié pour le code à injecter dans le <head>
+      - label: "Scripts et Styles pour le <head>"
+        name: "head_code"
+        widget: "code"
+        required: false
+        hint: "Collez ici les scripts spécifiques à cette page : config Tailwind, Google Analytics, Pixel Facebook, etc."
+        
+      # --- CHAMP EXISTANT ---
+      - { label: "Contenu du <body> de la page", name: "body", widget: "markdown", hint: "Collez ici uniquement le contenu visible de la page." }
