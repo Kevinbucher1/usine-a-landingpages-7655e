@@ -13,7 +13,7 @@ collections:
   # Collection pour les Landing Pages (test minimal)
   - name: "landing_pages"
     label: "Landing Page"
-    folder: "pages"
+    folder: "pages/lps"
     create: true
     slug: "{{slug}}"
     extension: "njk"
