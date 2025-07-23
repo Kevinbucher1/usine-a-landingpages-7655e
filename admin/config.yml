@@ -1,0 +1,38 @@
+# Decap CMS Configuration File
+
+# Partie backend, essentielle pour la connexion à GitHub
+backend:
+  name: git-gateway
+  branch: master
+
+# Emplacement des médias
+media_folder: "static/img"
+
+# Collections de contenu
+collections:
+  # Collection pour les Landing Pages
+  - name: "landing_pages"
+    label: "Landing Page"
+    folder: "pages/lps"
+    create: true
+    slug: "{{slug}}"
+    extension: "njk"
+    format: "frontmatter"
+    fields:
+      - { label: "Titre de la page", name: "title", widget: "string", required: true }
+      - { label: "URL personnalisée (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true, hint: "Entrez juste le texte, sans les barres /" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
+      - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code", allow_language_selection: false, output_code_only: true }
+      - { label: "Contenu HTML de la page", name: "body", widget: "markdown" }
+
+  # Collection pour les articles de blog
+  - name: "blog"
+    label: "Article de Blog"
+    folder: "posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
