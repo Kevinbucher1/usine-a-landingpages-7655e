@@ -14,7 +14,7 @@ collections:
     folder: "pages/lps"
     create: true
     # Les fichiers seront sauvegardés en .html
-    extension: "html" 
+    extension: "njk" 
     format: "frontmatter"
     fields:
       # Un champ pour le nom de la page dans l'interface du CMS
