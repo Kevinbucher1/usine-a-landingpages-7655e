@@ -1,4 +1,5 @@
 {
+  "layout": "layouts/base.njk",
   "eleventyComputed": {
     "permalink": "/{{ slug_url | slugify }}/"
   }
