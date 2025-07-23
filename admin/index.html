@@ -1,32 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://identity.netlify.com">
-    <title>Decap CMS</title>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <!-- Include Netlify Identity for authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script type="module" src="/admin/preview-templates/index.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          } else {
-            window.netlifyIdentity.on("logout", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Content Manager</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+  <script>
+    // Étape 1 : Créer un formateur personnalisé pour FORCER le style YAML "littéral" (|)
+    CMS.registerCustomFormat('yaml-literal', {
+      fromFile: (content) => jsyaml.load(content),
+      // C'est la ligne magique qui force le formatage avec "|"
+      toFile: (data) => jsyaml.dump(data, { styles: { '!!str': 'literal' } })
+    });
+
+    // Étape 2 : Définir toute votre configuration directement en JavaScript
+    var config = {
+      backend: {
+        name: "git-gateway",
+        branch: "master",
+      },
+      media_folder: "static/img",
+      collections: [
+        {
+          name: "landing_pages",
+          label: "Landing Page",
+          folder: "pages/lps",
+          create: true,
+          slug: "{{slug}}",
+          extension: "njk",
+          // Étape 3 : Appliquer notre formateur personnalisé à cette collection
+          format: "yaml-literal", 
+          fields: [
+            { label: "Titre de la page", name: "title", widget: "string", required: true },
+            { label: "URL personnalisée (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true, hint: "Entrez juste le texte, sans les barres /" },
+            { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" },
+            { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "code", allow_language_selection: false, output_code_only: true },
+            { label: "Contenu HTML de la page", name: "body", widget: "markdown" },
+          ],
+        },
+        {
+          name: "blog",
+          label: "Article de Blog",
+          folder: "posts",
+          create: true,
+          extension: "md",
+          // On applique aussi notre formateur ici pour être cohérent
+          format: "yaml-literal",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Publish Date", name: "date", widget: "datetime" },
+            { label: "Body", name: "body", widget: "markdown" },
+          ],
+        },
+      ],
+    };
+
+    // Étape 4 : Initialiser le CMS avec notre configuration "maison"
+    CMS.init({ config });
+  </script>
+</body>
 </html>
