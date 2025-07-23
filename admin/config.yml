@@ -23,8 +23,6 @@ collections:
       - { label: "URL personnalisée (ex: /ma-super-promo)", name: "permalink", widget: "string", required: true } # Pour contrôler l'URL si besoin
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" } # <-- LA LIGNE CRUCIALE A AJOUTER
       - { label: "CSS & Scripts (pour le <head>)", name: "page_css", widget: "text" } # L'éditeur de code est le meilleur pour ce champ
-      - { label: "Contenu HTML (pour le <body>)", name: "body", widget: "text" } # La solution à notre bug !
-
 
   # Collection pour les articles de blog
   - name: "blog"
