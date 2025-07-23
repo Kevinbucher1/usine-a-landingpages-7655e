@@ -1,18 +1,81 @@
-  <!-- Pied de page -->
-    <footer style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);" class="text-white">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">monchoix conso</h3>
-                    <p class="text-slate-300 text-sm">Votre intermédiaire de confiance pour les offres d'énergie.</p>
-                </div>
-                <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm">
-                    <a href="https://monchoix-conso.com/conditions-generales-dutilisation/" class="text-slate-300 hover:text-white transition" target="_blank" rel="noopener noreferrer">Conditions Générales d'Utilisation</a>
-                    <a href="https://monchoix-conso.com/politique-de-confidentialite/" class="text-slate-300 hover:text-white transition" target="_blank" rel="noopener noreferrer">Politique de Confidentialité</a>
-                </div>
-            </div>
-            <div class="border-t border-slate-700 mt-6 pt-6 text-center text-sm text-slate-400">
-                <p>&copy; 2025 monchoix conso. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+<style>
+  /*
+    Ce bloc de style est autonome et ne s'applique qu'au footer.
+    Il remplace les classes Tailwind CSS pour ce composant.
+  */
+  .mon-footer-global {
+    background-color: #141A46; /* Correspond à 'bg-primary' */
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-family: 'Poppins', sans-serif; /* Assurez-vous que Poppins est chargée sur la page principale */
+  }
+
+  .mon-footer-container {
+    max-width: 1280px; /* Correspond à 'container' */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Comportement par défaut pour mobile */
+    text-align: center;
+  }
+
+  .mon-footer-copyright {
+    font-size: 0.875rem; /* Correspond à 'text-sm' */
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  .mon-footer-nav {
+    display: flex;
+    flex-direction: column; /* Comportement par défaut pour mobile */
+    gap: 1rem;
+  }
+
+  .mon-footer-nav a {
+    font-size: 0.875rem; /* Correspond à 'text-sm' */
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mon-footer-nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /*
+    Styles pour les écrans plus larges (responsive)
+    md: correspond à 768px et plus
+  */
+  @media (min-width: 768px) {
+    .mon-footer-container {
+      flex-direction: row; /* Passe en ligne sur les grands écrans */
+      text-align: left;
+    }
+    .mon-footer-copyright {
+      margin-bottom: 0;
+    }
+    .mon-footer-nav {
+      flex-direction: row; /* Passe en ligne sur les grands écrans */
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+<footer class="mon-footer-global">
+  <div class="mon-footer-container">
+    <p class="mon-footer-copyright">
+      &copy; 2025 Mon Choix Conso. Tous droits réservés.
+    </p>
+    <nav class="mon-footer-nav">
+      <a href="https://monchoixconso.com/nouveaufournisseur/mentions-legales.html" target="_blank">Mentions légales</a>
+      <a href="https://monchoixconso.com/nouveaufournisseur/cgu-cgv.html" target="_blank">CGU-CGV</a>
+      <a href="https://monchoixconso.com/nouveaufournisseur/politique-de-confidentialite.html" target="_blank">Politique de protection des données</a>
+    </nav>
+  </div>
+</footer>
