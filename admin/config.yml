@@ -27,6 +27,7 @@ collections:
         name: "head_code"
         widget: "code"
         required: false
+        output_code_only: true
         hint: "Collez ici les scripts spécifiques à cette page : config Tailwind, Google Analytics, Pixel Facebook, etc."
         
       # --- CHAMP EXISTANT ---
