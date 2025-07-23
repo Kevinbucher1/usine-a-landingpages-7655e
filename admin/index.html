@@ -1,46 +1,32 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Content Manager - Test Minimal</title>
-</head>
-<body>
-  
-  <div id="nc-root"></div>
-
-  <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
-  
-  <script>
-    // Note : Le formateur personnalisé a été temporairement retiré.
-
-    // Configuration la plus simple possible
-    var config = {
-      backend: {
-        name: "git-gateway",
-        branch: "master",
-      },
-      media_folder: "static/img",
-      collections: [
-        // On ne garde qu'une seule collection pour le test
-        {
-          name: "landing_pages",
-          label: "Landing Page",
-          folder: "pages/lps",
-          create: true,
-          slug: "{{slug}}",
-          extension: "njk",
-          // On utilise le format par défaut, pas notre format personnalisé
-          format: "frontmatter", 
-          fields: [
-            { label: "Titre de la page", name: "title", widget: "string", required: true },
-            { label: "Contenu HTML de la page", name: "body", widget: "markdown" },
-          ],
-        },
-      ],
-    };
-
-    // Initialisation du CMS
-    CMS.init({ config });
-  </script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://identity.netlify.com">
+    <title>Decap CMS</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Include Netlify Identity for authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script type="module" src="/admin/preview-templates/index.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          } else {
+            window.netlifyIdentity.on("logout", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
