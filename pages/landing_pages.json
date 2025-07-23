@@ -1,0 +1,5 @@
+{
+  "eleventyComputed": {
+    "permalink": "/{{ slug_url | slugify }}/"
+  }
+}
