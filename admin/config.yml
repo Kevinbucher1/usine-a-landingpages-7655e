@@ -18,6 +18,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titre de la page (pour le CMS)", name: "title", widget: "string" }
+      - { label: "Titre pour le navigateur et SEO", name: "meta_title", widget: "string", required: true }
       - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true }
       - { label: "Afficher le pied de page global", name: "showFooter", widget: "boolean", default: true }
       
@@ -45,6 +46,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titre de la page (pour le CMS)", name: "title", widget: "string" }
+      - { label: "Titre pour le navigateur et SEO", name: "meta_title", widget: "string", required: true }
       - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: false }
       - { label: "Afficher le pied de page global", name: "showFooter", widget: "boolean", default: true }
       
