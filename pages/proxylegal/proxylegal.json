@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/base.njk",
+  "eleventyComputed": {
+    "permalink": "{{ permalink_override | default('/' + (slug_url | slugify) + '/') }}"
+  }
+}
