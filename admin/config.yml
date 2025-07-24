@@ -44,7 +44,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titre de la page (pour le CMS)", name: "title", widget: "string" }
-      - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: true }
+      - { label: "URL de la page (ex: ma-super-promo)", name: "slug_url", widget: "string", required: false }
       - { label: "Afficher le pied de page global", name: "showFooter", widget: "boolean", default: true }
       
       # --- CHAMP AJOUTÉ ---
