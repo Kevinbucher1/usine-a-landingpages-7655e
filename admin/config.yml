@@ -4,6 +4,8 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
+
 # Optionnel : pour pouvoir téléverser des images depuis le CMS
 media_folder: "static/img"
 
