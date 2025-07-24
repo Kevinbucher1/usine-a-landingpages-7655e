@@ -33,7 +33,8 @@ collections:
       # --- CHAMP EXISTANT ---
       - { label: "Contenu du <body> de la page", name: "body", widget: "markdown", hint: "Collez ici uniquement le contenu visible de la page." }
 
-  collections:
+
+
   - name: "lp_legal"
     label: "Proxy legal"
     label_singular: "Proxy legal"
