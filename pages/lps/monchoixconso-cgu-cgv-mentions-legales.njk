@@ -38,91 +38,169 @@ head_code: >-
       }
     }
   </script>
+
+  <style>
+    /* Ajout de styles pour le tableau des partenaires pour une meilleure lisibilité */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+    .custom-table th, .custom-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .custom-table th {
+      background-color: #f8fafc;
+      font-weight: 600;
+    }
+  </style>
 ---
 <header class="bg-white shadow-md">
     <div class="container mx-auto px-6 py-4">
-        <a href="index.html" class="text-2xl font-bold text-primary">Mon Choix Conso</a>
+        <a href="/" class="text-2xl font-bold text-primary">Mon Choix Conso</a>
     </div>
 </header>
 
 <main class="container mx-auto max-w-4xl my-12 px-6 flex-grow">
     <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold text-primary mb-8 border-b pb-4">Conditions générales d’utilisation</h1>
+        <h1 class="text-4xl font-bold text-primary mb-2">Conditions Générales d'Utilisation</h1>
+        <p class="text-sm text-gray-500 mb-8 border-b pb-4">Charte applicable au 1er avril 2025. Version 1.1</p>
         
         <div class="space-y-8 text-gray-700">
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">Préambule</h2>
-                <p>La poursuite de la navigation sur le Site “monchoixconso.com” (ci-après “le Site”), même à titre gratuit, vaut de la part des visiteurs du Site (ci-après les « Utilisateurs ») une acceptation sans réserve des dispositions et conditions d’utilisation qui suivent (ci-après dénommées « C.G.U. »). Avant toute utilisation des fonctionnalités du Site, l’Utilisateur reconnaît avoir pris connaissance des présentes C.G.U. et les avoir acceptés.</p>
+                <p>La poursuite de la navigation sur le Site “monchoix-conso.com” (ci-après “le Site”), même à titre gratuit, vaut de la part des visiteurs du Site (ci-après les « Utilisateurs ») une acceptation sans réserve des dispositions et conditions d’utilisation qui suivent (ci-après dénommées « C.G.U. »). Avant toute utilisation des fonctionnalités du Site, l’Utilisateur reconnaît avoir pris connaissance des présentes C.G.U. et les avoir acceptés.</p>
                 <p>La version en ligne de nos C.G.U. est la seule opposable pendant toute la durée d’utilisation du Site et jusqu’à ce que nous la remplacions par une nouvelle version.</p>
                 <p>Le Site est géré par la Société RECKON DIGITAL (ci-après l’« Éditeur”) qui se réserve le droit de modifier les présentes conditions à tout moment. Toute utilisation du Site après modification des C.G.U. vaut acceptation irrévocable par l’Utilisateur de la nouvelle version. En cas de désaccord avec les C.G.U. l’Utilisateur est invité à ne plus utiliser le Site.</p>
             </section>
-            
+
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 1 – DÉFINITIONS</h2>
-                <p>Outre les termes dont certains articles des CGU donnent une définition expresse, les termes suivants auront la signification précisée ci-après lorsque leur première lettre apparaît en majuscule.</p>
                 <p>Sur le Site, les termes ci-dessous ont la signification suivante :</p>
                 <ul class="list-disc list-inside ml-4 space-y-2 mt-4">
-                    <li><strong>« Contenu » :</strong> désigne l’ensemble des éléments constituant l’information présente sur le Site (textes, images, vidéos, algorithmes, logiciels, widgets, etc.) et permettant son fonctionnement, l’information de l’Utilisateur et la présentation de nos Services ;</li>
-                    <li><strong>« Droits de propriété intellectuelle » :</strong> désigne tous les droits de propriété intellectuelle et droits connexes (droit d’auteur, droits de marque, droits de brevets, noms commerciaux, bases de données, etc.) tels que protégés par le Code de la Propriété Intellectuelle ;</li>
-                    <li><strong>« Éditeur » ou “RECKON DIGITAL ”:</strong> désigne la Société RECKON DIGITAL, (sous le nom commercial LEADS STUDIO), SARL au capital social de 1000,00 €, immatriculée au RCS de Versailles sous le numéro B 877 893 271 et dont le siège est situé 15 rue de la Paroisse 78000 Versailles, contactable par mail à contact@leadstudio.fr ;</li>
-                    <li><strong>« Fonctionnalités » :</strong> désigne toutes les fonctionnalités mises à disposition des Utilisateurs via le Site ;</li>
-                    <li><strong>“Services” :</strong> désigne les services exécutés par l'Éditeur au profit de l’Utilisateur via le Site ;</li>
-                    <li><strong>“Site ”:</strong> désigne le site internet monchoixconso.com exploité par l’Éditeur ;</li>
-                    <li><strong>« Utilisateur » :</strong> désigne tout individu utilisant le Site et les Services et ayant accès à son contenu.</li>
+                    <li><strong>« Contenu » :</strong> désigne l’ensemble des éléments constituant l’information présente sur le Site (textes, images, vidéos, etc.) et permettant son fonctionnement.</li>
+                    <li><strong>« Droits de propriété intellectuelle » :</strong> désigne tous les droits de propriété intellectuelle et droits connexes (droit d’auteur, droits de marque, etc.) protégés par le Code de la Propriété Intellectuelle.</li>
+                    <li><strong>« Éditeur » ou “RECKON DIGITAL ”:</strong> désigne la Société RECKON DIGITAL (sous le nom commercial LEADS STUDIO), SARL au capital social de 1000,00 €, immatriculée au RCS de Versailles sous le numéro B 877 893 271, sise au 15 rue de la Paroisse 78000 Versailles, contactable par mail à contact@leadstudio.fr.</li>
+                    <li><strong>« Fonctionnalités » :</strong> désigne toutes les fonctionnalités mises à disposition des Utilisateurs via le Site.</li>
+                    <li><strong>“Services” :</strong> désigne les services exécutés par l'Éditeur au profit de l’Utilisateur via le Site.</li>
+                    <li><strong>“Site ”:</strong> désigne le site internet monchoix-conso.com exploité par l’Éditeur.</li>
+                    <li><strong>« Utilisateur » :</strong> désigne tout individu utilisant le Site et les Services.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 2 – MENTIONS LÉGALES</h2>
+                <p>En application de la loi n°2004-575 du 21 juin 2004, il est indiqué aux Utilisateurs l’identité des intervenants :</p>
+                <ul class="list-disc list-inside ml-4 space-y-2 mt-4">
+                    <li><strong>Propriétaire :</strong> Société RECKON DIGITAL (LEADS STUDIO), SARL, 15 rue de la Paroisse 78000 Versailles.</li>
+                    <li><strong>Mail de contact du Site :</strong> contact@leadstudio.fr</li>
+                    <li><strong>Responsable éditorial :</strong> RECKON DIGITAL - contact@leadstudio.fr</li>
+                    <li><strong>Hébergeur :</strong> HOSTINGER International Ltd, 61 Lordou Vironos str. 6023 Larnaca, Chypre. Données hébergées en FRANCE et en Allemagne.</li>
+                    <li><strong>Responsable du traitement des Données :</strong> RECKON DIGITAL - rgpd@leadstudio.fr</li>
+                    <li><strong>Développeur :</strong> RECKON DIGITAL.</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 2 – MENTIONS LÉGALES</h2>
-                <p>En application de la loi n°2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est indiqué aux Utilisateurs du Site, l’identité des intervenants :</p>
-                <ul class="list-disc list-inside ml-4 space-y-2 mt-4">
-                    <li><strong>Propriétaire :</strong> la Société RECKON DIGITAL, (sous le nom commercial LEADS STUDIO) SARL au capital social de 1000,00 €, immatriculée au RCS de Versailles sous le numéro B 877 893 271, siège social : 15 rue de la Paroisse 78000 Versailles.</li>
-                    <li><strong>Mail de contact :</strong> contact@leadstudio.fr</li>
-                </ul>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 3 – PROTECTION DES DONNÉES À CARACTÈRE PERSONNEL</h2>
+                <p>Pour l’utilisation du Site, l’Éditeur traite des données à caractère personnel dans le respect de la loi. Pour plus d'informations, consultez notre <a href="https://monchoix-conso.com/politique-de-confidentialite/" class="text-accent hover:underline">Politique de Protection des données</a>.</p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 4 – DESCRIPTION DES SERVICES FOURNIS</h2>
+                <p>Le site “monchoix-conso.com” est une plateforme qui met en relation des particuliers avec des fournisseurs d’énergie et d’internet/mobile. Il propose un formulaire de contact pour être rappelé par un conseiller partenaire. RECKON DIGITAL agit en tant que prestataire pour ses clients, dont la liste est ci-dessous :</p>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Partenaire</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EuroCRM</td>
+                            <td>contact@eurocrm.com</td>
+                            <td>+33 1 55 25 73 00</td>
+                        </tr>
+                        <tr>
+                            <td>Papernest</td>
+                            <td>client.energie@papernest.fr</td>
+                            <td>09 70 25 21 65 (énergie)</td>
+                        </tr>
+                        <tr>
+                            <td>Avent Media</td>
+                            <td>contact@avent-group.com</td>
+                            <td>+33 1 41 79 24 85</td>
+                        </tr>
+                         <tr>
+                            <td>BeMove</td>
+                            <td>contact@bemove.fr</td>
+                            <td>Non communiqué</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>En tant qu'intermédiaire, Reckon Digital décline toute responsabilité concernant les offres des partenaires. Les tarifs affichés sont indicatifs et les contrats sont soumis aux conditions des fournisseurs.</p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 5 – ACCÈS AU SITE</h2>
+                <p>L'accès au Site est réservé aux personnes de plus de 18 ans et capables juridiquement. L'Utilisateur est responsable de la mise en place des moyens informatiques et de télécommunications pour accéder au Site.</p>
             </section>
 
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 6 – PROPRIÉTÉ INTELLECTUELLE</h2>
-                <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">6.2 Notre marque</h3>
-                <p>Les marques verbales et visuelles (logos) de l’Éditeur sont protégées. Leur utilisation sans autorisation écrite de l’Éditeur est interdite sous peine de poursuites pénales et civiles.</p>
-                <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">6.3 Contenu</h3>
-                <p>Le contenu accessible en libre accès sur le Site reste la pleine et entière propriété intellectuelle de l’Éditeur et des contributeurs. L'Éditeur se réserve le droit de poursuivre tout Utilisateur pour toute violation de ces dispositions.</p>
+                <p>Tous les éléments du Site (marques, textes, images, etc.) sont protégés et sont la propriété pleine et entière de l’Éditeur ou de ses partenaires. Toute reproduction ou utilisation non autorisée est strictement interdite.</p>
             </section>
-
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 7 – GESTION DU SITE</h2>
-                <p>Pour la bonne gestion du Site, l'Éditeur pourra à tout moment :</p>
-                <ul class="list-disc list-inside ml-4 space-y-2 mt-4">
-                    <li>Suspendre, interrompre ou limiter l’accès à tout ou partie du Site.</li>
-                    <li>Supprimer toute information pouvant en perturber le fonctionnement.</li>
-                    <li>Suspendre le Site afin de procéder à des mises à jour.</li>
-                </ul>
+                <p>L'Éditeur se réserve le droit de suspendre, d'interrompre ou de limiter l'accès à tout ou partie du Site pour maintenance ou pour toute autre raison.</p>
             </section>
-
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 8 – RESPONSABILITÉS</h2>
-                <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">8.1 Accès au Site</h3>
-                <p>L’Éditeur s’engage à faire son possible pour que le Site soit accessible 24h/24 et 7j/7, mais ne garantit pas une disponibilité permanente. La responsabilité de l’Editeur ne peut être engagée en cas de défaillance, panne, ou interruption de fonctionnement.</p>
+                <p>L’Éditeur s’efforce de maintenir le Site accessible mais ne peut être tenu responsable des interruptions. L'Utilisateur est responsable de son équipement et de son utilisation du Site. L'Utilisateur s'engage à ne pas tenir de propos ou publier de contenu illicite ou contraire aux bonnes mœurs.</p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 9 – PHOTOGRAPHIES</h2>
+                <p>Les photographies présentes sur le Site ne sont pas contractuelles et n'engagent pas l'Éditeur.</p>
             </section>
             
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 10 – FORCE MAJEURE</h2>
-                <p>Les Parties ne pourront être tenues pour responsables si la non-exécution ou le retard dans l’exécution de leurs obligations découle d’un cas de force majeure au sens de l’article 1218 du Code Civil.</p>
+                <p>La responsabilité des parties ne pourra être engagée si la non-exécution de leurs obligations découle d’un cas de force majeure, au sens de l’article 1218 du Code Civil.</p>
             </section>
-
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 11 – LIENS HYPERTEXTES</h2>
-                <p>La mise en place de liens hypertextes vers le Site est interdite sans autorisation préalable et écrite de l’Éditeur. Le Site peut contenir des liens vers d'autres sites ; l’Editeur n’assume aucune responsabilité quant au contenu de ces sites.</p>
+                <p>La mise en place de liens hypertextes vers le Site est soumise à l'autorisation écrite de l'Éditeur. L'Éditeur n'est pas responsable du contenu des sites tiers accessibles via des liens hypertextes présents sur le Site.</p>
             </section>
-
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 12 – NON-VALIDITÉ PARTIELLE</h2>
+                <p>Si une ou plusieurs dispositions des présentes sont déclarées nulles, les autres dispositions conserveront toute leur force et leur portée.</p>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 13 – LANGUE</h2>
+                <p>En cas de traduction, la langue d’interprétation sera la langue française.</p>
+            </section>
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 14 – DROIT APPLICABLE</h2>
-                <p>Les présentes conditions d’utilisation sont régies par la loi française. En cas de litige, les tribunaux compétents de droit commun seront saisis.</p>
+                <p>Les présentes CGU sont régies par la loi française. Tout litige sera soumis aux tribunaux compétents de droit commun.</p>
             </section>
-
+            
             <section>
                 <h2 class="text-2xl font-bold text-primary mb-4">ARTICLE 15 – ASSISTANCE</h2>
-                <p>Pour toute question ou information, vous pouvez contacter l'Éditeur à l'adresse électronique suivante : contact@leadstudio.fr.</p>
+                <p>Pour toute question ou information, l'utilisateur peut contacter l'Éditeur par email à : contact@leadstudio.fr.</p>
             </section>
 
         </div>
