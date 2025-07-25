@@ -1,81 +1,75 @@
 <style>
   /*
-    Ce bloc de style est autonome et ne s'applique qu'au footer.
-    Il remplace les classes Tailwind CSS pour ce composant.
+    CSS intégré pour rendre le footer indépendant.
+    Ceci remplace les classes utilitaires de Tailwind.
   */
-  .mon-footer-global {
-    background-color: #141A46; /* Correspond à 'bg-primary' */
-    color: white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-family: 'Poppins', sans-serif; /* Assurez-vous que Poppins est chargée sur la page principale */
+  .footer-container {
+    background-color: #141A46; /* anciennement bg-primary */
+    color: #ffffff;            /* anciennement text-white */
+    margin-top: auto;
+    font-family: 'Poppins', sans-serif; /* Police Poppins comme dans les pages précédentes */
   }
 
-  .mon-footer-container {
-    max-width: 1280px; /* Correspond à 'container' */
+  .footer-content {
+    max-width: 1280px;         /* équivalent à 'container' de Tailwind */
     margin-left: auto;
     margin-right: auto;
+    padding: 1.5rem 1.5rem;     /* py-6 et px-6 */
     display: flex;
+    flex-direction: column;    /* par défaut sur mobile */
     justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Comportement par défaut pour mobile */
     text-align: center;
   }
 
-  .mon-footer-copyright {
-    font-size: 0.875rem; /* Correspond à 'text-sm' */
+  .footer-copyright {
+    font-size: 0.75rem;        /* text-xs */
     opacity: 0.8;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;    /* mb-3 */
   }
 
-  .mon-footer-nav {
+  .footer-nav {
     display: flex;
-    flex-direction: column; /* Comportement par défaut pour mobile */
-    gap: 1rem;
+    flex-wrap: wrap;           /* pour un meilleur responsive */
+    justify-content: center;
+    gap: 0.5rem 1.25rem;       /* gap-y-2 et gap-x-5 */
   }
 
-  .mon-footer-nav a {
-    font-size: 0.875rem; /* Correspond à 'text-sm' */
+  .footer-link {
+    font-size: 0.75rem;        /* text-xs */
     opacity: 0.8;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease-in-out;
   }
 
-  .mon-footer-nav a:hover {
+  .footer-link:hover {
     opacity: 1;
     text-decoration: underline;
   }
 
-  /*
-    Styles pour les écrans plus larges (responsive)
-    md: correspond à 768px et plus
-  */
+  /* Styles responsives pour les écrans plus larges (md: et plus) */
   @media (min-width: 768px) {
-    .mon-footer-container {
-      flex-direction: row; /* Passe en ligne sur les grands écrans */
+    .footer-content {
+      flex-direction: row;
       text-align: left;
     }
-    .mon-footer-copyright {
+    .footer-copyright {
       margin-bottom: 0;
-    }
-    .mon-footer-nav {
-      flex-direction: row; /* Passe en ligne sur les grands écrans */
-      gap: 1.5rem;
     }
   }
 </style>
 
-<footer class="mon-footer-global">
-  <div class="mon-footer-container">
-    <p class="mon-footer-copyright">
+<footer class="footer-container">
+  <div class="footer-content">
+    
+    <p class="footer-copyright">
       &copy; 2025 Mon Choix Conso. Tous droits réservés.
     </p>
-    <nav class="mon-footer-nav">
-      <a href="https://monchoixconso.com/nouveaufournisseur/mentions-legales.html" target="_blank">Mentions légales</a>
-      <a href="https://monchoixconso.com/nouveaufournisseur/cgu-cgv.html" target="_blank">CGU-CGV</a>
-      <a href="https://monchoixconso.com/nouveaufournisseur/politique-de-confidentialite.html" target="_blank">Politique de protection des données</a>
+    
+    <nav class="footer-nav">
+      <a href="/conditions-generales-dutilisation/" class="footer-link">CGU-CGV</a>
+      <a href="/politique-de-confidentialite/" class="footer-link">Politique de confidentialité</a>
     </nav>
+
   </div>
 </footer>
